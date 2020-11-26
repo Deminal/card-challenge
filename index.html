@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Profile card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+    *, *:after, *:before {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --dark: hsl(185, 75%, 39%);
+      --verydark: hsl(229, 23%, 23%);
+      --grayblue: hsl(227, 10%, 46%);
+      --darkgrey: hsl(0,0%,59%);
+    }
+    
+    .wrapper {
+      font-family: 'Kumbh Sans', sans-serif;
+      font-weight: 400;
+      font-size: 1.125rem;
+      min-height: 100vh;
+      min-width: 375px;
+      max-width: 100vw;
+      background:
+        url("./images/bg-pattern-top.svg") left -233px top -23vh no-repeat,
+        url("./images/bg-pattern-bottom.svg") right -233px bottom -23vh no-repeat,
+        /* url("./images/bg-pattern-top.svg") calc(0% - (77vw + 275px)) calc(0% - (23vh + 275px)) no-repeat, */
+        /* url("./images/bg-pattern-bottom.svg")  calc(100% + 50vw) calc(100% + 50vw) no-repeat, */
+        /* url("./images/bg-pattern-bottom.svg") calc(100% + 33vw) calc(100% + 33vh) no-repeat, */
+        linear-gradient(var(--dark), var(--dark));
+      background-size: calc(13vw + 477px) auto, calc(13vw + 477px) auto;
+      padding: 0 1.33rem;
+      display: grid;
+      grid-template-rows: 80% 20%;
+      place-items: center;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 433px;
+      height: 50vh;
+      display: flex;
+      flex-flow: column nowrap;
+      text-align: center;
+      background: url("./images/bg-pattern-card.svg") top left no-repeat;
+      background-color: #FFF;
+      background-size: 101% 33%;
+      border-radius: 15px;
+      box-shadow: 0 0 20px var(--verydark);
+    }
+
+    .card__header {
+      width: 100%;
+      height: 33%;
+      position: relative;
+    }
+
+    .card img {
+      position: absolute;
+      top: calc(100% - 50px);
+      left: calc(50% - 50px);
+      border-radius: 50%;
+      border: solid 5px white;
+    }
+
+    .card__content {
+      height: 55.11%;
+      /* background: white; */
+      /* background: red; */
+      margin-top: auto;
+      padding-top: 1.33rem;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      color: var(--grayblue);
+      line-height: 1.66rem;
+    }
+
+    .card .dark {
+      color: var(--verydark);
+      font-weight: 700;
+    }
+
+    .card__stats {
+      display: flex;
+      height: 66%;
+      justify-content: space-around;
+      align-items: center;
+      padding: 1.33rem;
+      border-top: solid 1px var(--darkgrey);
+    }
+
+    .attribution { font-size: 1.33rem; text-align: center; line-height: 1.88rem;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+  </style>
+</head>
+<body>
+    <div class="wrapper">
+      <div class="card" tab-index = "0" alt = "Profile card for Victor Crest">
+        <div class="card__header">
+          <img src="./images/image-victor.jpg" width = "100px" height = "auto" alt = "Profile picture of Victor Crest">
+        </div>
+        <div class="card__content">
+          <div class="card__title">
+            <p><span class = "dark">Victor Crest</span> 26
+            <br><span>London</span></p>
+          </div>
+          <div class="card__stats">
+            <p><span class="dark">80K</span><br>Followers</p>
+            <p><span class="dark">803K</span><br>Likes</p>
+            <p><span class="dark">1.4K</span><br>Photos</p>
+          </div>
+        </div>
+      </div><!--card-->
+  <div class="attribution">
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor (Link opens a new window)</a>.</p>
+    <p>Coded by <a href="#">DKB</a>.</p>
+  </div>
+  </div><!--wrapper-->
+</body>
+</html>
